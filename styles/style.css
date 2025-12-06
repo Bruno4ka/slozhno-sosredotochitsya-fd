@@ -10,12 +10,13 @@
 }
 
 .header {
+  position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   padding: 10px;
 }
 
-.header, footer {
+.header {
   block-size: 100vh;
   min-block-size: 668px;
   inline-size: 100%;
@@ -26,10 +27,12 @@
   width: 52px;
   height: 26px;
   text-transform: uppercase;
+  top: 10px;
   right: 19px;
   font-size: 18px;
   line-height: 25px;
   color: var(--accent-color);
+  display: none;
 }
 
 .rec::after {
@@ -43,6 +46,14 @@
   background-color: var(--accent-color);
   box-shadow: 0 0 4px 2px var(--accent-color);
   border-radius: 50%;
+}
+
+.theme-dark .rec {
+  display: block;
+}
+
+.theme-dark .rec::after {
+  display: block;
 }
 
 .header__theme-menu-list {
@@ -124,6 +135,7 @@
   line-height: 23.4px;
   color: var(--header-color);
   margin-block-end: 66px;
+  height: fit-content;
 }
 
 .main {
@@ -159,7 +171,7 @@
 }
 
 .section-a:hover {
-  text-decoration: underline;
+  border-bottom: 2px solid var(--text-color);
 }
 
 .section-a:focus-visible {
@@ -179,10 +191,9 @@
   font-weight: 700;
 }
 
-.cards-title-five {
+.cards-title-easy_sovets {
   color: var(--title-color);
   font-size: 18px;
-  font-weight: 700;
   margin-block-end: 20px;
 }
 
@@ -192,10 +203,8 @@
   gap: 10px;
 }
 
-.cards_h-sovets {
+.font-weight-sovets {
   font-weight: 400;
-  color: var(--title-color);
-  font-size: 18px;
 }
 
 .section_h-images {
@@ -227,6 +236,9 @@
   justify-content: center;
   align-items: center;
   margin-block-start: 40px;
+  block-size: 100vh;
+  min-block-size: 668px;
+  inline-size: 100%;
 }
 
 .focus {
@@ -243,7 +255,7 @@
     padding: 20px;
   }
 
-  .header, footer {
+  .header {
   block-size: 100vh;
   min-block-size: 1024px;
   inline-size: 100%;
@@ -251,6 +263,7 @@
 
   .rec {
   right: 29px;
+  top: 20px;
   }
 
   .decorated-zone::after {
@@ -351,6 +364,9 @@
 
   .footer {
     margin-block-start: 60px;
+    block-size: 100vh;
+    min-block-size: 1024px;
+    inline-size: 100%;
   }
 
   .focus {
@@ -359,10 +375,8 @@
 }
 
 @media (width >= 1024px) {
-  .header, footer {
-  block-size: 100vh;
+  .header {
   min-block-size: 768px;
-  inline-size: 100%;
   }
 
   .header__theme-menu {
@@ -405,4 +419,8 @@
     grid-template-columns: 315px auto;
     grid-template-rows: auto ;  
   }
+
+  .footer {
+    min-block-size: 768px;
+   }
 }
