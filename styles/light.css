@@ -18,6 +18,10 @@
   --button-color-hover: rgba(50, 49, 45, 0.4);
 }
 
+.theme-light .rec {
+  display: none;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
   --background-image: url(../images/cover-image-light.png);
