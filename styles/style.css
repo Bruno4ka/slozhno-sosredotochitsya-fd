@@ -286,7 +286,7 @@
     gap: 80px;
   }
 
-  .section-two-columns-grid {
+  .section-why-and-sovets {
     grid-template-columns: 1fr 2fr;
   }
 
@@ -379,7 +379,7 @@
   margin-block-end: 134px;
   }
 
-  .section-two-columns-grid {
+  .section-why-and-sovets {
     grid-template-columns: 1fr 2.06fr;
   }
 
